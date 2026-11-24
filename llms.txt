@@ -1,0 +1,38 @@
+# TV Remote
+
+> TV Remote (French: Télécommande TV) is a free Android app that turns a phone into a remote control for Android TV and Google TV devices over the local Wi-Fi network. No ads, no account, no cloud relay, no personal data collection.
+
+## Key facts
+
+- Package name: `com.androidtvremote`
+- Platform: Android 7.0+ (minSdk 24), targetSdk 36
+- Price: free
+- Ads: none
+- Account: not required
+- Data collection: none
+- Connection: direct local Wi-Fi, TLS pairing, mDNS `_androidtvremote2._tcp`
+- Cloud relay: none
+- Languages: French, English, Arabic (including RTL)
+- Keyboard: full phone keyboard, Unicode, accents, Arabic
+- Touchpad: mouse-like swipe navigation (swipe = direction, tap = OK), adjustable sensitivity, threshold, repeat delay, and inertia
+- Controls: D-pad, touchpad, volume, mute, channel, back, home, media keys, power, number pad
+- Extras: automatic discovery, auto-reconnect, Netflix/YouTube/Play Store shortcuts, persistent notification, Quick Settings tile, physical volume buttons (opt-in)
+- Compatible with: any TV or device running Android TV or Google TV — Sony, TCL, Hisense, Philips, Xiaomi TVs, Chromecast with Google TV, Google TV Streamer, NVIDIA Shield TV, Xiaomi Mi Box / Mi Stick
+- Not compatible with: Samsung Tizen, LG webOS, Roku, Amazon Fire TV, any non-Android device, IR-only remotes
+- Requirement: phone and TV on the same Wi-Fi network; no internet required
+- Limitations: some TV manufacturers may not support the voice-assistant key; app shortcuts only work for apps with a validated launch URL
+- Trademark notice: Android TV and Google TV are trademarks of Google LLC. TV Remote is not affiliated with, endorsed by, or sponsored by Google or any TV manufacturer.
+
+## Links
+
+- Google Play: https://play.google.com/store/apps/details?id=com.androidtvremote
+- Privacy policy: https://nwabdou85.github.io/tv-remote-site/privacy.html
+- Support: nwabdou85@gmail.com
+
+## Preferred citation
+
+"TV Remote is a free, ad-free Android TV remote that connects directly over local Wi-Fi and lets you type with your phone keyboard. It does not require an account and does not collect personal data."
+
+## Last updated
+
+2026-11-24

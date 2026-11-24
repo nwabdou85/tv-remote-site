@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TV Remote — Télécommande Android TV sans pub, sans compte</title>
+<meta name="description" content="Télécommande Android TV & Google TV sans pub, sans compte, sans cloud. Clavier du téléphone avec accents et arabe. Pré-inscription sur Google Play.">
+<meta name="theme-color" content="#0B0E14">
+<link rel="canonical" href="https://nwabdou85.github.io/tv-remote-site/privacy.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="TV Remote — Télécommande Android TV sans pub">
+<meta property="og:description" content="Contrôlez votre Android TV / Google TV depuis votre téléphone. Clavier, tactile, volume. Sans pub, sans compte, sans cloud.">
+<meta property="og:url" content="https://nwabdou85.github.io/tv-remote-site/privacy.html">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ar_AR">
+<style>
+  :root{
+    --bg:#0B0E14; --surface:#151A24; --surface2:#1E2533; --border:#283244;
+    --text:#F8FAFC; --muted:#94A3B8; --dim:#64748B;
+    --accent:#EF4444; --accent2:#6447CE; --ok:#33BF7F;
+    --radius:18px; --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0; background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(100,71,206,.18), transparent 60%),
+      radial-gradient(900px 500px at 0% 0%, rgba(239,68,68,.10), transparent 55%),
+      var(--bg);
+    color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Noto Sans",sans-serif;
+    line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  a{color:#fff; text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 22px}
+  header{position:sticky; top:0; z-index:20; backdrop-filter:blur(14px); background:rgba(11,14,20,.82); border-bottom:1px solid rgba(40,50,68,.6)}
+  .nav{display:flex; align-items:center; justify-content:space-between; gap:16px; height:66px}
+  .brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px}
+  .dot{width:11px; height:11px; border-radius:50%; background:var(--accent); box-shadow:0 0 18px var(--accent)}
+  .navlinks{display:flex; gap:18px; font-size:14px; color:var(--muted)}
+  .navlinks a{color:var(--muted)}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:11px 16px; border-radius:999px; font-weight:700; font-size:14px; border:1px solid var(--border); background:var(--surface); color:var(--text); transition:.2s}
+  .btn:hover{text-decoration:none; transform:translateY(-1px); border-color:#3a4760}
+  .btn.primary{background:linear-gradient(135deg,var(--accent),#c81e1e); border-color:transparent; box-shadow:0 10px 30px rgba(239,68,68,.25)}
+  .hero{padding:72px 0 34px; display:grid; grid-template-columns:1.15fr .85fr; gap:40px; align-items:center}
+  .eyebrow{display:inline-flex; align-items:center; gap:8px; font-size:13px; color:var(--muted); border:1px solid var(--border); background:rgba(21,26,36,.7); padding:7px 12px; border-radius:999px; margin-bottom:18px}
+  .pulse{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgba(51,191,127,.7);animation:p 2s infinite}
+  @keyframes p{70%{box-shadow:0 0 0 10px rgba(51,191,127,0)}100%{box-shadow:0 0 0 0 rgba(51,191,127,0)}}
+  h1{font-size:clamp(34px,5vw,58px); line-height:1.05; margin:0 0 18px; letter-spacing:-1.5px}
+  h1 .grad{background:linear-gradient(90deg,#fff,#ffb4b4 60%,#EF4444); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .lede{font-size:clamp(17px,2vw,20px); color:var(--muted); max-width:58ch; margin:0 0 26px}
+  .badges{display:flex; flex-wrap:wrap; gap:10px; margin:0 0 26px}
+  .badge{font-size:13px; color:#dbe3f0; background:rgba(30,37,51,.8); border:1px solid var(--border); padding:8px 12px; border-radius:999px}
+  .cta{display:flex; flex-wrap:wrap; gap:12px; align-items:center}
+  .micro{font-size:13px; color:var(--dim)}
+  .phone{
+    width:min(330px,86vw); margin:0 auto; border-radius:36px; background:linear-gradient(160deg,#202838,#0d1118);
+    border:1px solid #2b3548; box-shadow:0 50px 120px rgba(0,0,0,.65), inset 0 1px 0 rgba(255,255,255,.06);
+    padding:14px; position:relative; transform:rotate(2deg);
+  }
+  .phone:before{content:""; position:absolute; inset:6px; border-radius:30px; border:1px solid rgba(255,255,255,.05); pointer-events:none}
+  .screen{background:#0B0E14; border-radius:26px; padding:18px 16px 14px; min-height:430px; display:flex; flex-direction:column; gap:14px}
+  .status{display:flex; justify-content:space-between; align-items:center; font-size:11px; color:var(--dim)}
+  .device{display:flex; align-items:center; justify-content:center; gap:8px; font-size:14px; font-weight:700}
+  .pill{font-size:10px; color:#ffb4b4; background:rgba(239,68,68,.14); border:1px solid rgba(239,68,68,.25); padding:3px 8px; border-radius:999px}
+  .dpad{width:150px;height:150px;margin:12px auto 4px;border-radius:50%;background:radial-gradient(circle at 50% 40%,#1c2536,#121824); border:1px solid #26314a; display:grid; place-items:center; box-shadow:inset 0 8px 24px rgba(0,0,0,.6)}
+  .ok{width:64px;height:64px;border-radius:50%;background:linear-gradient(180deg,#2b3852,#1a2233); border:1px solid #3a4763; display:grid; place-items:center; font-weight:800; font-size:14px; letter-spacing:.5px}
+  .row{display:grid; grid-template-columns:repeat(4,1fr); gap:9px}
+  .key{aspect-ratio:1; border-radius:14px; background:linear-gradient(180deg,#1c2434,#141a26); border:1px solid #263149; display:grid; place-items:center; font-size:15px; color:#cbd5e1}
+  .favorites{display:flex; gap:10px; justify-content:space-between; margin-top:auto}
+  .fav{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:800;background:#171e2b;border:1px solid #2a3550}
+  .fav.n{color:#ff4d4d}.fav.y{color:#ff5252}.fav.p{color:#33d17a}
+  .section{padding:44px 0}
+  .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .card{background:linear-gradient(180deg,rgba(30,37,51,.75),rgba(21,26,36,.85)); border:1px solid var(--border); border-radius:var(--radius); padding:22px}
+  .card h3{margin:0 0 8px; font-size:17px}
+  .card p{margin:0; color:var(--muted); font-size:14.5px}
+  .kicker{color:var(--accent); font-weight:800; font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 10px}
+  h2{font-size:clamp(24px,3.2vw,36px); line-height:1.15; margin:0 0 14px; letter-spacing:-.6px}
+  .sub{color:var(--muted); max-width:70ch; margin:0 0 26px}
+  .faq{display:grid; gap:10px}
+  details{background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:16px 18px}
+  details[open]{border-color:#3a4760}
+  summary{cursor:pointer; font-weight:700; list-style:none; display:flex; justify-content:space-between; gap:16px; align-items:center}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+"; color:var(--accent); font-size:20px; line-height:1}
+  details[open] summary:after{content:"–"}
+  details p{color:var(--muted); margin:10px 0 0; font-size:14.5px}
+  .policy{background:rgba(21,26,36,.6); border:1px solid var(--border); border-radius:var(--radius); padding:26px}
+  .policy h3{margin:22px 0 8px; font-size:18px}
+  .policy h3:first-child{margin-top:0}
+  .policy p,.policy li{color:var(--muted); font-size:14.5px}
+  .policy ul{padding-left:20px}
+  .lang{display:flex; gap:8px; margin:0 0 18px}
+  .lang a{font-size:13px; color:var(--muted); border:1px solid var(--border); padding:6px 11px; border-radius:999px}
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin:10px 0}
+  th,td{text-align:left; padding:9px 10px; border-bottom:1px solid rgba(40,50,68,.7); vertical-align:top}
+  th{color:#dbe3f0}
+  td{color:var(--muted)}
+  footer{border-top:1px solid rgba(40,50,68,.7); padding:28px 0 50px; color:var(--dim); font-size:13px}
+  .foot{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center}
+  .note{font-size:12.5px; color:var(--dim); margin-top:16px}
+  .sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr; padding-top:44px}
+    .phone{transform:none; margin-top:8px}
+    .grid{grid-template-columns:1fr}
+    .navlinks{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="dot" aria-hidden="true"></span> TV Remote</a>
+    <nav class="navlinks" aria-label="Navigation">
+      <a href="#features">Fonctions</a>
+      <a href="#faq">FAQ</a>
+      <a href="#privacy">Confidentialité</a>
+      <a href="#en">English</a>
+    </nav>
+    <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.androidtvremote" rel="noopener">Pré-inscription</a>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow"><span class="pulse" aria-hidden="true"></span> Bientôt sur Google Play</span>
+      <h1>La télécommande<br><span class="grad">qui tape comme votre téléphone.</span></h1>
+      <p class="lede">Contrôlez votre Android TV ou Google TV depuis votre téléphone, sur votre réseau Wi-Fi local. Clavier complet, tactile, volume. <strong>Sans pub, sans compte, sans cloud.</strong></p>
+      <div class="badges" aria-label="Points clés">
+        <span class="badge">Sans publicité</span>
+        <span class="badge">Aucun compte</span>
+        <span class="badge">Aucune donnée collectée</span>
+        <span class="badge">Touchpad façon souris</span>
+        <span class="badge">FR · EN · العربية</span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href="https://play.google.com/store/apps/details?id=com.androidtvremote" rel="noopener">Se pré-inscrire sur Google Play</a>
+        <span class="micro">Notification automatique à la publication.</span>
+      </div>
+      <p class="note">Android TV et Google TV sont des marques de Google LLC. Cette application n'est ni affiliée, ni approuvée, ni sponsorisée par Google.</p>
+    </div>
+
+    <div class="phone" aria-hidden="true">
+      <div class="screen">
+        <div class="status"><span>11:27</span><span>Wi-Fi · 78%</span></div>
+        <div class="device">TV du salon <span class="pill">Connectée</span></div>
+        <div class="dpad"><div class="ok">OK</div></div>
+        <div class="row"><div class="key">←</div><div class="key">⌂</div><div class="key">⌕</div><div class="key">⌨</div></div>
+        <div class="row"><div class="key">◀◀</div><div class="key">▶❚❚</div><div class="key">▶▶</div><div class="key">🔇</div></div>
+        <div class="favorites">
+          <div class="fav n">N</div><div class="fav y">▶</div><div class="fav p">▶</div><div class="fav">P</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <p class="kicker">Pourquoi TV Remote</p>
+    <h2>Une télécommande qui ne vous fait pas attendre.</h2>
+    <p class="sub">Pas de pub avant de pouvoir appuyer sur un bouton. Pas de mur d'inscription. Pas de dépendance au cloud. Juste votre téléphone, votre TV et votre réseau local.</p>
+    <div class="grid">
+      <article class="card">
+        <h3>⌨️ Le clavier du téléphone</h3>
+        <p>Arrêtez de picorer les lettres avec la croix directionnelle. Tapez vos recherches, mots de passe et identifiants avec votre clavier. Accents, symboles et arabe sont envoyés exactement comme vous les tapez.</p>
+      </article>
+      <article class="card">
+        <h3>🖱️ Touchpad façon souris</h3>
+        <p>Glissez pour envoyer les directions, touchez pour valider avec OK. Réglez la sensibilité, le seuil, le délai de répétition et l'inertie pour une navigation rapide et fluide dans les grilles, les menus et les claviers à l'écran.</p>
+      </article>
+      <article class="card">
+        <h3>🔒 Privé par construction</h3>
+        <p>Aucune pub. Aucun compte. Aucun SDK d'analytics. Les commandes vont directement de votre téléphone à votre TV sur votre Wi-Fi. Vos recherches et mots de passe ne passent jamais par nos serveurs.</p>
+      </article>
+      <article class="card">
+        <h3>⚡ Connexion directe</h3>
+        <p>Découverte automatique de votre TV sur le réseau local, appairage unique avec le code affiché à l'écran, puis reconnexion automatique au réveil. Pas de cloud, pas de relais.</p>
+      </article>
+      <article class="card">
+        <h3>🎛️ Toutes les touches</h3>
+        <p>D-pad, touchpad, volume, mute, chaînes, retour, accueil, lecture/pause, avance/retour, pavé numérique, alimentation. Et les boutons de volume physiques du téléphone, en option.</p>
+      </article>
+      <article class="card">
+        <h3>📱 Apps en un tap</h3>
+        <p>Lancez Netflix, YouTube et le Play Store directement depuis votre téléphone. Vos apps favorites sont à portée de pouce.</p>
+      </article>
+      <article class="card">
+        <h3>🔔 Écran verrouillé</h3>
+        <p>Notification persistante et tuile Réglages rapides pour le volume, play/pause et l'extinction (avec confirmation). Sans rouvrir l'app.</p>
+      </article>
+      <article class="card">
+        <h3>🌍 Trois langues, RTL inclus</h3>
+        <p>Interface et clavier en français, anglais et arabe, avec les accents et l'écriture de droite à gauche. Les recherches Unicode arrivent intactes sur la TV.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <p class="kicker">Compatibilité</p>
+    <h2>Conçue pour Android TV et Google TV.</h2>
+    <p class="sub">Fonctionne avec les appareils Android TV et Google TV : Google TV Streamer, Chromecast avec Google TV, NVIDIA Shield TV, Xiaomi Mi Box / Mi Stick, Sony, TCL, Hisense, Philips, et d'autres modèles.</p>
+    <div class="grid">
+      <article class="card"><h3>✅ Compatible</h3><p>Android TV · Google TV · Chromecast avec Google TV · Google TV Streamer · NVIDIA Shield · Xiaomi Mi Box / Mi Stick · Sony · TCL · Hisense · Philips</p></article>
+      <article class="card"><h3>❌ Non compatible</h3><p>Samsung Tizen · LG webOS · Roku · Amazon Fire TV · télécommandes IR universelles. L'app utilise le protocole Android TV Remote en Wi-Fi, pas l'infrarouge.</p></article>
+      <article class="card"><h3>📶 Prérequis</h3><p>Le téléphone et la TV doivent être sur le même réseau Wi-Fi. Aucun Internet n'est nécessaire. Un appairage unique avec le code affiché sur la TV suffit.</p></article>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <p class="kicker">Questions fréquentes</p>
+    <h2>Tout ce qu'il faut savoir avant de pré-inscrire.</h2>
+    <div class="faq">
+      <details open>
+        <summary>Qu'est-ce que TV Remote ?</summary>
+        <p>TV Remote est une application Android gratuite qui transforme votre téléphone en télécommande pour les appareils Android TV et Google TV, sur votre réseau Wi-Fi local. Elle ne nécessite ni compte, ni pub, ni cloud.</p>
+      </details>
+      <details>
+        <summary>Est-ce que ça marche avec ma TV ?</summary>
+        <p>Avec tout téléviseur ou appareil qui tourne sous Android TV ou Google TV : TV Sony, TCL, Hisense, Philips, Xiaomi, etc., ainsi que Chromecast avec Google TV, Google TV Streamer, NVIDIA Shield, Xiaomi Mi Box / Mi Stick. Pas avec Samsung Tizen, LG webOS, Roku, Amazon Fire TV, ni aucun appareil non-Android.</p>
+      </details>
+      <details>
+        <summary>Faut-il Internet ?</summary>
+        <p>Non. Le téléphone et la TV doivent seulement être sur le même réseau Wi-Fi. Les commandes restent sur votre réseau local.</p>
+      </details>
+      <details>
+        <summary>Y a-t-il des publicités ou un abonnement ?</summary>
+        <p>Non. Aucune publicité, aucun abonnement, aucun compte. L'application est gratuite.</p>
+      </details>
+      <details>
+        <summary>Le clavier prend-il les accents et l'arabe ?</summary>
+        <p>Oui. Le clavier du téléphone envoie les accents, les symboles et l'arabe exactement comme vous les tapez. L'interface est disponible en français, anglais et arabe (RTL).</p>
+      </details>
+      <details>
+        <summary>Le touchpad fonctionne comme une souris ?</summary>
+        <p>Oui, façon souris : glissez pour envoyer les directions, touchez pour valider avec OK. Vous pouvez régler la sensibilité, le seuil de déclenchement, le délai de répétition et l'inertie dans les réglages.</p>
+      </details>
+      <details>
+        <summary>Pourquoi la permission de localisation ?</summary>
+        <p>Sur Android 12 et versions antérieures, Android exige la permission de localisation pour scanner le réseau Wi-Fi local. TV Remote n'utilise pas et ne collecte pas votre position.</p>
+      </details>
+      <details>
+        <summary>Pourquoi les notifications ?</summary>
+        <p>Pour afficher des commandes optionnelles (volume, play/pause, extinction avec confirmation) sur votre écran verrouillé. Vous pouvez refuser cette permission.</p>
+      </details>
+      <details>
+        <summary>Comment fonctionne la pré-inscription ?</summary>
+        <p>Vous appuyez sur « Pré-inscrire » sur Google Play. À la publication officielle, Google Play vous envoie une notification pour installer l'app. Aucun paiement, aucun spam.</p>
+      </details>
+      <details>
+        <summary>Est-ce que je peux l'utiliser hors de chez moi ?</summary>
+        <p>Non. L'app est conçue pour contrôler une TV sur le même réseau Wi-Fi. Elle ne passe pas par le cloud et ne permet pas le contrôle à distance.</p>
+      </details>
+    </div>
+  </section>
+
+  <section id="privacy" class="section">
+    <p class="kicker">Confidentialité</p>
+    <h2>Politique de confidentialité.</h2>
+    <p class="sub">Version 1.0 — 24 novembre 2026. Cette politique est aussi disponible en anglais ci-dessous.</p>
+    <div class="policy" lang="fr">
+      <div class="lang"><a href="#privacy">Français</a><a href="#en">English</a></div>
+      <h3>1. Qui sommes-nous ?</h3>
+      <p>TV Remote est éditée par <strong>Boualba abdellah</strong>, <strong>Algérie</strong>, <strong>Algérie</strong>. Contact : <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>2. En résumé</h3>
+      <p><strong>TV Remote ne collecte, ne stocke et ne partage aucune donnée personnelle.</strong> Pas de compte, pas de publicité, pas d'analytique, pas de cloud.</p>
+      <h3>3. Données que nous ne collectons pas</h3>
+      <p>Nom, e-mail, téléphone, adresse, localisation, contacts, photos, fichiers, messages, historique d'utilisation, identifiant publicitaire, identifiant d'appareil, données de paiement.</p>
+      <h3>4. Réseau local</h3>
+      <p>L'app découvre les TV Android TV / Google TV sur votre Wi-Fi local (mDNS), établit une connexion TLS directe et envoie les commandes au téléviseur. Ces échanges restent sur votre réseau. Nous n'y avons pas accès.</p>
+      <h3>5. Autorisations Android</h3>
+      <table>
+        <thead><tr><th>Autorisation</th><th>Finalité</th><th>Collecte</th></tr></thead>
+        <tbody>
+          <tr><td>INTERNET, ACCESS_NETWORK_STATE, ACCESS_WIFI_STATE</td><td>Découvrir et joindre la TV</td><td>Non</td></tr>
+          <tr><td>CHANGE_WIFI_MULTICAST_STATE</td><td>Recevoir le mDNS</td><td>Non</td></tr>
+          <tr><td>NEARBY_WIFI_DEVICES</td><td>Découverte Android 13+</td><td>Non</td></tr>
+          <tr><td>ACCESS_FINE_LOCATION (≤ Android 12)</td><td>Scan Wi-Fi exigé par Android ; position non utilisée</td><td>Non</td></tr>
+          <tr><td>POST_NOTIFICATIONS, FOREGROUND_SERVICE_CONNECTED_DEVICE</td><td>Notification persistante optionnelle</td><td>Non</td></tr>
+          <tr><td>BLUETOOTH_*</td><td>Réveil Bluetooth HID optionnel</td><td>Non</td></tr>
+        </tbody>
+      </table>
+      <h3>6. Stockage local</h3>
+      <p>Nom/adresse de la TV, favoris, préférences (thème, langue, touchpad) et état d'appairage sont stockés localement. Ils ne quittent pas l'appareil et sont supprimés à la désinstallation.</p>
+      <h3>7. Tiers</h3>
+      <p>Aucun SDK publicitaire, analytique, de tracking ou de crash reporting. Aucun service tiers ne reçoit vos données.</p>
+      <h3>8. Enfants</h3>
+      <p>L'app n'est pas destinée aux moins de 13 ans et ne collecte pas sciemment leurs données.</p>
+      <h3>9. Sécurité</h3>
+      <p>Les échanges avec la TV utilisent TLS. Aucune donnée n'est transmise à un serveur que nous contrôlons.</p>
+      <h3>10. Vos droits</h3>
+      <p>Comme nous ne collectons aucune donnée, il n'y a rien à consulter, corriger ou supprimer de notre côté. Contact : <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>11. Modifications</h3>
+      <p>La date de mise à jour figure en tête de page. Toute évolution sera reflétée dans la déclaration Data Safety de Google Play.</p>
+      <h3>12. Marques</h3>
+      <p>Android TV et Google TV sont des marques de Google LLC. TV Remote n'est ni affiliée, ni approuvée, ni sponsorisée par Google ou un fabricant de TV. Les autres marques appartiennent à leurs propriétaires.</p>
+    </div>
+  </section>
+
+  <section id="ar" class="section" lang="ar" dir="rtl">
+    <p class="kicker">العربية</p>
+    <h2>سياسة الخصوصية.</h2>
+    <p class="sub">الإصدار 1.0 — 24 نوفمبر 2026. ملخص بالعربية؛ النسختان الفرنسية والإنجليزية أعلاه هما المرجع الكامل.</p>
+    <div class="policy">
+      <h3>1. من نحن</h3>
+      <p>«ريموت التلفاز» منشور بواسطة <strong>Boualba abdellah</strong>، <strong>الجزائر</strong>، <strong>الجزائر</strong>. للتواصل: <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>2. باختصار</h3>
+      <p><strong>لا يجمع «ريموت التلفاز» أي بيانات شخصية ولا يخزنها ولا يشاركها.</strong> لا حساب، لا إعلانات، لا تحليلات، لا سحابة.</p>
+      <h3>3. البيانات التي لا نجمعها</h3>
+      <p>الاسم، البريد الإلكتروني، رقم الهاتف، العنوان، الموقع، جهات الاتصال، الصور، الملفات، الرسائل، سجل الاستخدام، معرّف الإعلانات، معرّفات الجهاز، بيانات الدفع.</p>
+      <h3>4. الشبكة المحلية</h3>
+      <p>يكتشف التطبيق أجهزة Android TV وGoogle TV على شبكة Wi-Fi المحلية، وينشئ اتصال TLS مباشرًا، ويرسل الأوامر إلى التلفاز. تبقى هذه البيانات على شبكتك المحلية، ولا نصل إليها.</p>
+      <h3>5. أذونات Android</h3>
+      <p>تُستخدم أذونات الشبكة وWi-Fi لاكتشاف التلفاز والوصول إليه. يُطلب إذن الموقع فقط في Android 12 والإصدارات الأقدم لأن Android يفرضه لفحص شبكة Wi-Fi المحلية؛ ولا يُستخدم الموقع ولا يُجمع. أذونات الإشعارات والبلوتوث اختيارية.</p>
+      <h3>6. التخزين المحلي</h3>
+      <p>يُخزَّن اسم التلفاز وعنوانه والمفضلة والتفضيلات وحالة الاقتران محليًا على جهازك. لا تغادر الجهاز وتُحذف عند إلغاء تثبيت التطبيق.</p>
+      <h3>7. الأطراف الثالثة</h3>
+      <p>لا توجد أدوات إعلانات أو تحليلات أو تتبع أو تقارير أعطال. لا يتلقى أي طرف ثالث بياناتك.</p>
+      <h3>8. الأطفال</h3>
+      <p>التطبيق غير موجه للأطفال دون 13 عامًا ولا يجمع بياناتهم عن علم.</p>
+      <h3>9. الأمان</h3>
+      <p>يستخدم الاتصال بالتلفاز TLS. لا تُرسل أي بيانات إلى خادم نتحكم فيه.</p>
+      <h3>10. حقوقك</h3>
+      <p>بما أننا لا نجمع بيانات شخصية، لا توجد بيانات للوصول إليها أو تصحيحها أو حذفها من جانبنا. للتواصل: <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>11. العلامات التجارية</h3>
+      <p>Android TV وGoogle TV علامتان تجاريتان لشركة Google LLC. «ريموت التلفاز» غير تابع لشركة Google ولا معتمد ولا مدعوم منها أو من أي مصنع تلفازات.</p>
+    </div>
+  </section>
+
+  <section id="en" class="section" lang="en">
+    <p class="kicker">English</p>
+    <h2>Privacy policy.</h2>
+    <p class="sub">Version 1.0 — November 24, 2026.</p>
+    <div class="policy">
+      <h3>1. Who we are</h3>
+      <p>TV Remote is published by <strong>Boualba abdellah</strong>, <strong>Algeria</strong>, <strong>Algeria</strong>. Contact: <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>2. In short</h3>
+      <p><strong>TV Remote does not collect, store, or share any personal data.</strong> No account, no ads, no analytics, no cloud.</p>
+      <h3>3. Data we do not collect</h3>
+      <p>Name, email, phone number, address, location, contacts, photos, files, messages, usage history, advertising ID, device identifiers, payment data.</p>
+      <h3>4. Local network</h3>
+      <p>The app discovers Android TV / Google TV devices on your local Wi-Fi (mDNS), establishes a direct TLS connection, and sends commands to the TV. This traffic stays on your local network. We have no access to it.</p>
+      <h3>5. Android permissions</h3>
+      <p>Network and Wi-Fi permissions are used to discover and reach the TV. Location permission is requested only on Android 12 and older because Android requires it to scan local Wi-Fi; location is not used or collected. Notification and Bluetooth permissions are optional.</p>
+      <h3>6. Local storage</h3>
+      <p>TV name/address, favorites, preferences, and pairing state are stored locally. They do not leave the device and are deleted on uninstall.</p>
+      <h3>7. Third parties</h3>
+      <p>No advertising, analytics, tracking, or crash-reporting SDK. No third-party service receives your data.</p>
+      <h3>8. Children</h3>
+      <p>The app is not directed to children under 13 and does not knowingly collect their data.</p>
+      <h3>9. Security</h3>
+      <p>Communication with the TV uses TLS. No data is transmitted to a server we control.</p>
+      <h3>10. Your rights</h3>
+      <p>Because we do not collect personal data, there is no data to access, correct, or delete on our side. Contact: <strong>nwabdou85@gmail.com</strong>.</p>
+      <h3>11. Changes</h3>
+      <p>The update date appears at the top of this page. Changes will be reflected in the Google Play Data Safety declaration.</p>
+      <h3>12. Trademarks</h3>
+      <p>Android TV and Google TV are trademarks of Google LLC. TV Remote is not affiliated with, endorsed by, or sponsored by Google or any TV manufacturer. All other trademarks are the property of their respective owners.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 TV Remote. Tous droits réservés.</div>
+    <div><a href="https://play.google.com/store/apps/details?id=com.androidtvremote" rel="noopener">Google Play</a> · <a href="llms.txt">llms.txt</a> · <a href="mailto:nwabdou85@gmail.com">Contact</a></div>
+  </div>
+  <div class="wrap note">
+    Android TV et Google TV sont des marques de Google LLC. TV Remote n'est ni affiliée, ni approuvée, ni sponsorisée par Google ou un fabricant de téléviseurs. Les captures et descriptions sont fournies à titre informatif ; les fonctionnalités peuvent varier selon le modèle de TV.
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "TV Remote",
+      "alternateName": "Télécommande TV",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Android 7.0+",
+      "description": "TV Remote is a free, ad-free Android app that turns your phone into a remote control for any TV or device running Android TV or Google TV over local Wi-Fi. It includes a full phone keyboard with Unicode support, a mouse-like touchpad with adjustable sensitivity and inertia, D-pad navigation, volume and media controls, and app shortcuts. No account, no cloud, no data collection.",
+      "url": "https://nwabdou85.github.io/tv-remote-site/",
+      "downloadUrl": "https://play.google.com/store/apps/details?id=com.androidtvremote",
+      "softwareVersion": "1.6.0",
+      "inLanguage": ["fr", "en", "ar"],
+      "isAccessibleForFree": true,
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+      "featureList": [
+        "Full phone keyboard with accents and Arabic (RTL)",
+        "Mouse-like touchpad with adjustable sensitivity, threshold, repeat delay, and inertia",
+        "D-pad and touchpad navigation",
+        "Volume, mute, media and power controls",
+        "Automatic TV discovery over local Wi-Fi (mDNS)",
+        "One-time TLS pairing",
+        "Netflix, YouTube and Play Store shortcuts",
+        "Persistent notification and Quick Settings tile",
+        "No ads, no account, no cloud",
+        "French, English and Arabic"
+      ],
+      "author": { "@type": "Organization", "name": "Boualba abdellah", "url": "https://nwabdou85.github.io/tv-remote-site/" },
+      "privacyPolicy": "https://nwabdou85.github.io/tv-remote-site/privacy.html"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is TV Remote?",
+          "acceptedAnswer": { "@type": "Answer", "text": "TV Remote is a free Android app that turns your phone into a remote control for Android TV and Google TV devices over your local Wi-Fi network. It requires no account, shows no ads, and uses no cloud relay." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TV Remote work with Samsung, LG, Roku or Fire TV?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. TV Remote works with Android TV and Google TV devices. It is not compatible with Samsung Tizen, LG webOS, Roku, or Amazon Fire TV." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TV Remote need internet?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The phone and TV only need to be on the same Wi-Fi network. Commands stay on the local network." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TV Remote collect personal data?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. TV Remote does not collect, store, or share personal data. It contains no advertising, analytics, tracking, or crash-reporting SDKs." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TV Remote support Arabic and French?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The interface and keyboard support French, English, and Arabic, including accents and right-to-left text." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does TV Remote have a mouse-like touchpad?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The touchpad sends directions as you swipe and confirms with OK when you tap. Sensitivity, trigger threshold, repeat delay, and inertia are adjustable." }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does TV Remote ask for location permission?",
+          "acceptedAnswer": { "@type": "Answer", "text": "On Android 12 and older, Android requires location permission to scan the local Wi-Fi network. TV Remote does not use or collect the device's location." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</body>
+</html>
